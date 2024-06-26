@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkgudynwjj56y"]
+
+[ext_resource type="PackedScene" uid="uid://cctjmyrbqo5e3" path="res://scenes/player.tscn" id="1_07wed"]
+[ext_resource type="PackedScene" uid="uid://ruirb1bqdfrw" path="res://scenes/enemyFighter.tscn" id="2_pp5ms"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -273)
+
+[node name="Player" parent="." instance=ExtResource("1_07wed")]
+
+[node name="EnemyFighter" parent="." instance=ExtResource("2_pp5ms")]
+position = Vector2(136, -557)
