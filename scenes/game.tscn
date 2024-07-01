@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkgudynwjj56y"]
+[gd_scene load_steps=9 format=3 uid="uid://bkgudynwjj56y"]
 
 [ext_resource type="Script" path="res://script/game.gd" id="1_5vioa"]
 [ext_resource type="PackedScene" uid="uid://cctjmyrbqo5e3" path="res://scenes/player.tscn" id="1_07wed"]
-[ext_resource type="PackedScene" uid="uid://ruirb1bqdfrw" path="res://scenes/enemyFighter.tscn" id="2_pp5ms"]
 [ext_resource type="PackedScene" uid="uid://de38ynoxgcomy" path="res://scenes/background.tscn" id="3_kqa17"]
-[ext_resource type="Script" path="res://scenes/EnemyTimer.gd" id="5_oh7fs"]
+[ext_resource type="Script" path="res://script/EnemyTimer.gd" id="5_oh7fs"]
 
 [sub_resource type="Animation" id="Animation_re5ta"]
 length = 0.001
@@ -58,10 +57,6 @@ position = Vector2(180, 320)
 [node name="Player" parent="." instance=ExtResource("1_07wed")]
 z_index = 1
 position = Vector2(180, 593)
-
-[node name="EnemyFighter" parent="." instance=ExtResource("2_pp5ms")]
-z_index = 1
-position = Vector2(316, -91)
 
 [node name="Background" parent="." instance=ExtResource("3_kqa17")]
 

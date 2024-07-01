@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://ruirb1bqdfrw"]
+[gd_scene load_steps=5 format=3 uid="uid://ruirb1bqdfrw"]
 
 [ext_resource type="Texture2D" uid="uid://dy3ljgpmlo8wa" path="res://assets/Foozle's Void Pack/Foozle_2DS0012_Void_FleetPack_1/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Fighter - Base.png" id="1_rltyy"]
 [ext_resource type="Script" path="res://script/enemyFighter.gd" id="1_sos1v"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pmwq1"]
-radius = 13.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jakf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y83x5"]
+radius = 6.08276
 
 [node name="EnemyFighter" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_sos1v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,10 +19,10 @@ texture = ExtResource("1_rltyy")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_pmwq1")
+shape = SubResource("RectangleShape2D_3jakf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_pmwq1")
+shape = SubResource("CircleShape2D_y83x5")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 

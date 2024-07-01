@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed : int = 300
+var speed : int = 400
 var direction : Vector2 =  Vector2(0,1)
 
 # Called when the node enters the scene tree for the first time.
@@ -21,3 +21,4 @@ func _on_area_2d_body_entered(body):
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 		queue_free()
+
