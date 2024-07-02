@@ -1,7 +1,7 @@
 extends Node2D
 
-var speed : int = 600
-var direction : int = -1
+var speed : int = 325
+var direction : int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,13 +11,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	move_local_y(direction * speed * delta)
-
+	
 
 func _on_visible_notifier_screen_exited():
 	queue_free()
 
 func _on_area_2d_body_entered(body):
-	if body.has_method("damage"):
-		body.damage()
+	if body.has_method("tookDamage"):
+		body.tookDamage()
 		queue_free()
 		

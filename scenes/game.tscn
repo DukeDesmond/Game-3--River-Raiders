@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkgudynwjj56y"]
+[gd_scene load_steps=10 format=3 uid="uid://bkgudynwjj56y"]
 
 [ext_resource type="Script" path="res://script/game.gd" id="1_5vioa"]
 [ext_resource type="PackedScene" uid="uid://cctjmyrbqo5e3" path="res://scenes/player.tscn" id="1_07wed"]
+[ext_resource type="Script" path="res://script/game_manager.gd" id="2_qa654"]
 [ext_resource type="PackedScene" uid="uid://de38ynoxgcomy" path="res://scenes/background.tscn" id="3_kqa17"]
 [ext_resource type="Script" path="res://script/EnemyTimer.gd" id="5_oh7fs"]
 
@@ -51,11 +52,15 @@ point_count = 2
 [node name="Game" type="Node2D"]
 script = ExtResource("1_5vioa")
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_qa654")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(180, 320)
 
 [node name="Player" parent="." instance=ExtResource("1_07wed")]
-z_index = 1
+z_index = 2
 position = Vector2(180, 593)
 
 [node name="Background" parent="." instance=ExtResource("3_kqa17")]
