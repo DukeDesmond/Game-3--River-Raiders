@@ -6,7 +6,6 @@ var life: int = 3
 var bullet = preload("res://scenes/enemy_bullet.tscn")
 var muzzlePosition
 
-@onready var game_manager = %GameManager
 @onready var animation_player = $AnimationPlayer
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var area2dCollisison = $Area2D/CollisionShape2D
@@ -30,12 +29,10 @@ func damage():
 	animation_player.play("hit_flash")
 	if life != 0:
 		life -= 1
-		game_manager.add_score(200)
 	else:
 		direction =  Vector2(0,0)
 		area2dCollisison.disabled = true
 		charactercollision.disabled = true
-		game_manager.add_score(1000)
 		animated_sprite_2d.play("death")
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

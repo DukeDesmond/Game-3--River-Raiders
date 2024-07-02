@@ -52,7 +52,7 @@ func playerShoot ():
 	var bulletInstance2 = bullet.instantiate() as Node2D
 	bulletInstance1.global_position = muzzle1.global_position
 	bulletInstance2.global_position = muzzle2.global_position
-	 
+	get_parent().add_child(bulletInstance1)
 	get_parent().add_child(bulletInstance2)
 
 

@@ -5,8 +5,6 @@ var speed : int = 400
 var direction : Vector2 =  Vector2(0,1)
 var life: int = 1
 
-
-@onready var game_manager = %GameManager
 @onready var animation_player = $AnimationPlayer
 @onready var area2dCollisison = $Area2D/CollisionShape2D
 @onready var charactercollision = $CollisionShape2D
@@ -27,12 +25,11 @@ func damage():
 	animation_player.play("hit_flash")
 	if life != 0:
 		life -= 1
-		game_manager.add_score(200)
+	
 	else:
 		direction =  Vector2(0,0)
 		area2dCollisison.disabled = true
 		charactercollision.disabled = true
-		game_manager.add_score(500)
 		animated_sprite_2d.play("death")
 		
 
