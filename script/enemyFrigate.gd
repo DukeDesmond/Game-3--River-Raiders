@@ -12,9 +12,10 @@ var muzzlePosition
 @onready var charactercollision = $CollisionShape2D
 @onready var muzzle = $Muzzle
 @onready var reload_timer = $reloadTimer
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 
-# Called when the node enters the scene tree for the first time.
+# Called when the node enters the scene tree for the first ti$menuTimer.
 func _ready():
 	muzzlePosition = muzzle.position
 
@@ -29,10 +30,13 @@ func damage():
 	animation_player.play("hit_flash")
 	if life != 0:
 		life -= 1
-	else:
+	elif life == 0:
+		life -= 1
 		direction =  Vector2(0,0)
 		area2dCollisison.disabled = true
 		charactercollision.disabled = true
+		get_tree().call_group("score", "add_score500")
+		audio_stream_player_2d.play()
 		animated_sprite_2d.play("death")
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

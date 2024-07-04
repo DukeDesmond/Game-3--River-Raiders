@@ -10,6 +10,7 @@ extends StaticBody2D
 @onready var muzzle1 :Marker2D = $mainShip/weapons/Muzzle1
 @onready var muzzle2 :Marker2D = $mainShip/weapons/Muzzle2
 @onready var reload_timer = $reloadTimer
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -25,6 +26,7 @@ var life: int = 4
 func _ready():
 	muzzle1Position = muzzle1.position
 	muzzle2Position = muzzle2.position
+	
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -66,17 +68,19 @@ func tookDamage():
 	elif life == 4:
 		life -= 1
 		main_ship.play("damage1")
+		audio_stream_player_2d.play()
 		animation_player.play("immunity_frames")
-		
 		
 	elif life == 3:
 		life -= 1
 		main_ship.play("damage2")
+		audio_stream_player_2d.play()
 		animation_player.play("immunity_frames")
 		
 	elif life == 2:
 		life -= 1
 		main_ship.play("damage3")
+		audio_stream_player_2d.play()
 		animation_player.play("immunity_frames")
 		
 	else:
@@ -85,13 +89,21 @@ func tookDamage():
 		engine.visible = false
 		engine_effect.visible = false
 		speed = 0
+		audio_stream_player_2d.stream = load("res://assets/Enprimer Spaceship SFX/wave/explosion/explosion12.wav")
+		audio_stream_player_2d.play()
 		main_ship.play("death")
-
+		
+		
+		
+		
 
 func _on_main_ship_animation_finished():
 	if main_ship.animation == "death":
 		queue_free()
+		get_tree().change_scene_to_file("res://scenes/lose_menu.tscn")
 
 
 func _on_animation_player_animation_finished(anim_name):
 	animation_player.play('RESET')
+
+

@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkgudynwjj56y"]
+[gd_scene load_steps=12 format=3 uid="uid://bkgudynwjj56y"]
 
 [ext_resource type="Script" path="res://script/game.gd" id="1_5vioa"]
 [ext_resource type="PackedScene" uid="uid://cctjmyrbqo5e3" path="res://scenes/player.tscn" id="1_07wed"]
 [ext_resource type="Script" path="res://script/game_manager.gd" id="2_qa654"]
 [ext_resource type="PackedScene" uid="uid://de38ynoxgcomy" path="res://scenes/background.tscn" id="3_kqa17"]
+[ext_resource type="FontFile" uid="uid://t5je2h311cuo" path="res://assets/Brackeys Platformer Assets/fonts/PixelOperator8-Bold.ttf" id="3_qgs2w"]
 [ext_resource type="Script" path="res://script/EnemyTimer.gd" id="5_oh7fs"]
+
+[sub_resource type="Theme" id="Theme_nqvbk"]
+default_font = ExtResource("3_qgs2w")
 
 [sub_resource type="Animation" id="Animation_re5ta"]
 length = 0.001
@@ -52,9 +56,17 @@ point_count = 2
 [node name="Game" type="Node2D"]
 script = ExtResource("1_5vioa")
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." groups=["score"]]
 unique_name_in_owner = true
 script = ExtResource("2_qa654")
+
+[node name="score" type="Label" parent="GameManager"]
+offset_right = 88.0
+offset_bottom = 32.0
+theme = SubResource("Theme_nqvbk")
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(180, 320)

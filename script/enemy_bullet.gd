@@ -3,9 +3,11 @@ extends Node2D
 var speed : int = 325
 var direction : int = 1
 
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	audio_stream_player_2d.play()
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

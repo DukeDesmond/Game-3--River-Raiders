@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1kq0xrw1nc37"]
+[gd_scene load_steps=10 format=3 uid="uid://c1kq0xrw1nc37"]
 
 [ext_resource type="Script" path="res://script/enemy_bullet.gd" id="1_judor"]
 [ext_resource type="Texture2D" uid="uid://bdhtcpbt8eiaa" path="res://assets/Foozle's Void Pack/Foozle_2DS0012_Void_FleetPack_1/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Projectiles/PNGs/Kla'ed - Big Bullet.png" id="1_knd4a"]
+[ext_resource type="AudioStream" uid="uid://c1mk3uinx3kpa" path="res://assets/MrShaneSealeys Lazer SFX Pack/Wav/Lazer Triangle (3).wav" id="3_hruii"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sng5w"]
 atlas = ExtResource("1_knd4a")
@@ -57,5 +58,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_lb22f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hruii")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

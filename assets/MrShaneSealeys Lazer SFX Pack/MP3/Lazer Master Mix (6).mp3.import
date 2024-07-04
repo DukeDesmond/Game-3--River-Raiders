@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4kuo2acm7rme"
+path="res://.godot/imported/Lazer Master Mix (6).mp3-8312206ab4f1970e664f245f4bd14f1e.mp3str"
+
+[deps]
+
+source_file="res://assets/MrShaneSealeys Lazer SFX Pack/MP3/Lazer Master Mix (6).mp3"
+dest_files=["res://.godot/imported/Lazer Master Mix (6).mp3-8312206ab4f1970e664f245f4bd14f1e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

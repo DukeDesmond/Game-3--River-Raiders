@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2brtvlgo3cxs"
+path="res://.godot/imported/Lazer Square (3).wav-881935d05f4ff1f490d2fb847830d949.sample"
+
+[deps]
+
+source_file="res://assets/MrShaneSealeys Lazer SFX Pack/Wav/Lazer Square (3).wav"
+dest_files=["res://.godot/imported/Lazer Square (3).wav-881935d05f4ff1f490d2fb847830d949.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

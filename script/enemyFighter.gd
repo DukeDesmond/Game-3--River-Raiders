@@ -9,6 +9,7 @@ var life: int = 1
 @onready var area2dCollisison = $Area2D/CollisionShape2D
 @onready var charactercollision = $CollisionShape2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,10 +27,13 @@ func damage():
 	if life != 0:
 		life -= 1
 	
-	else:
+	elif life == 0:
+		life -= 1
 		direction =  Vector2(0,0)
 		area2dCollisison.disabled = true
 		charactercollision.disabled = true
+		get_tree().call_group("score", "add_score100")
+		audio_stream_player_2d.play()
 		animated_sprite_2d.play("death")
 		
 

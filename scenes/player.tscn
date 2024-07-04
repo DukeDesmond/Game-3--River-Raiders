@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cctjmyrbqo5e3"]
+[gd_scene load_steps=42 format=3 uid="uid://cctjmyrbqo5e3"]
 
 [ext_resource type="Texture2D" uid="uid://qq1yiaqt6yka" path="res://assets/Foozle's Void Pack/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engine Effects/PNGs/Main Ship - Engines - Base Engine - Spritesheet.png" id="1_4o64b"]
 [ext_resource type="Script" path="res://script/player.gd" id="1_qenir"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d2er1namy0ft5" path="res://assets/2D explosions/Type 1/6.png" id="10_mq4ms"]
 [ext_resource type="Texture2D" uid="uid://xic41s5fcnly" path="res://assets/2D explosions/Type 1/7.png" id="11_e4a6r"]
 [ext_resource type="Texture2D" uid="uid://ck8sj8xqadcdp" path="res://assets/2D explosions/Type 1/8.png" id="12_t4kyg"]
+[ext_resource type="AudioStream" uid="uid://bwvbtll5v5mcq" path="res://assets/Enprimer Spaceship SFX/wave/utility/eff6.wav" id="18_h57l8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ct462"]
 resource_local_to_scene = true
@@ -217,6 +218,21 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gh2s"]
 radius = 8.06226
 
+[sub_resource type="Animation" id="Animation_8ox8g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mainShip:material:shader_parameter/Hit_Flash")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_xeinm"]
 resource_name = "immunity_frames"
 length = 0.6
@@ -231,21 +247,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, true, false, true, false]
-}
-
-[sub_resource type="Animation" id="Animation_8ox8g"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("mainShip:material:shader_parameter/Hit_Flash")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yq28s"]
@@ -299,6 +300,10 @@ shape = SubResource("CircleShape2D_4gh2s")
 libraries = {
 "": SubResource("AnimationLibrary_yq28s")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_h57l8")
+volume_db = 10.0
 
 [connection signal="animation_finished" from="mainShip" to="." method="_on_main_ship_animation_finished"]
 [connection signal="timeout" from="reloadTimer" to="." method="_on_reload_timer_timeout"]

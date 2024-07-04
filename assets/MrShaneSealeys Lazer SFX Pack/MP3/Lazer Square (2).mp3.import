@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmrllov5rsga3"
+path="res://.godot/imported/Lazer Square (2).mp3-5daba3af56ea149e3aef53d6ee475f07.mp3str"
+
+[deps]
+
+source_file="res://assets/MrShaneSealeys Lazer SFX Pack/MP3/Lazer Square (2).mp3"
+dest_files=["res://.godot/imported/Lazer Square (2).mp3-5daba3af56ea149e3aef53d6ee475f07.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

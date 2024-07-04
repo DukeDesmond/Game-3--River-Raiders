@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjsrvf3wlxayi"
+path="res://.godot/imported/Lazer One Shot.mp3-8af0d02563f3d62e533bd66b851160d4.mp3str"
+
+[deps]
+
+source_file="res://assets/MrShaneSealeys Lazer SFX Pack/MP3/Lazer One Shot.mp3"
+dest_files=["res://.godot/imported/Lazer One Shot.mp3-8af0d02563f3d62e533bd66b851160d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

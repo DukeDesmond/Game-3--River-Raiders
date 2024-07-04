@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bngeuuie233be"
+path="res://.godot/imported/Lazer Saw (3).mp3-4c0c5b3d58b8c3fea24401861f96b142.mp3str"
+
+[deps]
+
+source_file="res://assets/MrShaneSealeys Lazer SFX Pack/MP3/Lazer Saw (3).mp3"
+dest_files=["res://.godot/imported/Lazer Saw (3).mp3-4c0c5b3d58b8c3fea24401861f96b142.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

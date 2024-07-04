@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://o5w2a61yp27h"
+path="res://.godot/imported/Lazer Retangle 2 (7).wav-fb7173e933eabb5e69f5ef402a145ffe.sample"
+
+[deps]
+
+source_file="res://assets/MrShaneSealeys Lazer SFX Pack/Wav/Lazer Retangle 2 (7).wav"
+dest_files=["res://.godot/imported/Lazer Retangle 2 (7).wav-fb7173e933eabb5e69f5ef402a145ffe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
