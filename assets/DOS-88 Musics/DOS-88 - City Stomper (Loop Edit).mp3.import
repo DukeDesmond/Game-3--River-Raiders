@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/DOS-88 - City Stomper (Loop Edit).mp3-dcd339c
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
